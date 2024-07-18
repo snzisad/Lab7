@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Welcome</h1>
+    <p>Let's login with your credentials!</p>
+
+    <br>
+    <form method="POST" action="{{ url_for('login') }}">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        {% for message in get_flashed_messages() %}
+            <p class="flash">{{ message }}</p>
+        {% endfor %}
+        
+        <input type="submit" value="Login">
+
+        <p>New here? <a href="/signup">Register now!</a></p>
+        
+    </form>
+</div>
+{% endblock %}
