@@ -4,7 +4,7 @@ import re
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'your_secret_key2'
+app.config['SECRET_KEY'] = '8f42a73054b1749f8f58848be5e6502c'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
